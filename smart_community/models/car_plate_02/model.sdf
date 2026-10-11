@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+
+  <model name="car_plate_02">
+    <static>true</static>
+
+    <!-- ================================================= -->
+    <!-- 车辆背景实体：34.5cm × 25cm × 5mm              -->
+    <!-- ================================================= -->
+
+    <link name="car_background">
+
+      <collision name="collision">
+        <pose>0 0 0.125 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.345 0.005 0.250</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="background_board">
+        <pose>0 0 0.125 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.345 0.005 0.250</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+
+          <script>
+            <uri>model://car_plate_02/materials/scripts</uri>
+            <uri>model://car_plate_02/materials/textures</uri>
+            <name>CarPlate/Background02</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- ================================================= -->
+      <!-- 独立车牌贴图：9.5cm × 3cm                       -->
+      <!-- ================================================= -->
+
+      <visual name="license_plate">
+        <!--
+             x = 0      水平居中
+             y = -0.003 位于背景正面
+             z = 0.070  位于车辆尾部下方区域
+        -->
+        <pose>0 -0.003 0.070 1.5708 0 0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.095 0.030</size>
+          </plane>
+        </geometry>
+
+        <material>
+          <script>
+            <uri>model://car_plate_02/materials/scripts</uri>
+            <uri>model://car_plate_02/materials/textures</uri>
+            <name>CarPlate/Plate02</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+</sdf>

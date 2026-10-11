@@ -1,0 +1,47 @@
+material TrafficLight/Red
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture traffic_red.png
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material TrafficLight/Yellow
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture traffic_yellow.png
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material TrafficLight/Green
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture traffic_green.png
+                filtering trilinear
+            }
+        }
+    }
+}

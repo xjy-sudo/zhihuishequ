@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+
+<model name="person_community_09">
+
+<static>true</static>
+
+<link name="link">
+
+
+<!-- 立牌主体 -->
+
+<visual name="body">
+
+<pose>
+0 0 0.075 0 0 0
+</pose>
+
+<geometry>
+
+<box>
+
+<size>
+0.04 0.005 0.15
+</size>
+
+</box>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+0.5 0.5 0.5 1
+</ambient>
+
+</material>
+
+</visual>
+
+
+
+<!-- 图片贴图层 -->
+
+<visual name="texture_plane">
+
+<pose>
+0 -0.003 0.075 1.5708 0 0
+</pose>
+
+
+<geometry>
+
+<plane>
+
+<size>
+0.04 0.15
+</size>
+
+</plane>
+
+</geometry>
+
+
+<material>
+
+<script>
+
+ <uri>model://person_community_09/materials/scripts</uri>
+    <uri>model://person_community_09/materials/textures</uri>
+    <name>Community/Person09</name>
+
+</script>
+
+</material>
+
+</visual>
+
+
+</link>
+
+</model>
+
+</sdf>

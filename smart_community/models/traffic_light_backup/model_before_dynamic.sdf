@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="traffic_light">
+    <static>true</static>
+
+    <link name="traffic_light_body">
+
+      <visual name="pole">
+        <pose>0 0 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.70</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.10 0.10 0.10 1</ambient>
+          <diffuse>0.10 0.10 0.10 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="housing">
+        <pose>0 0 0.80 0 0 0</pose>
+        <geometry>
+          <box><size>0.16 0.10 0.38</size></box>
+        </geometry>
+        <material>
+          <ambient>0.03 0.03 0.03 1</ambient>
+          <diffuse>0.03 0.03 0.03 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="red_light">
+        <pose>0 -0.056 0.92 1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.045</radius>
+            <length>0.015</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <emissive>1 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <visual name="yellow_light">
+        <pose>0 -0.056 0.80 1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.045</radius>
+            <length>0.015</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.30 0.25 0 1</ambient>
+          <diffuse>0.30 0.25 0 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="green_light">
+        <pose>0 -0.056 0.68 1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.045</radius>
+            <length>0.015</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.25 0 1</ambient>
+          <diffuse>0 0.25 0 1</diffuse>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

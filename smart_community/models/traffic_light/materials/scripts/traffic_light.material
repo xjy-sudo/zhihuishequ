@@ -1,0 +1,95 @@
+material TrafficLight/RedOff
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 红灯暗.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material TrafficLight/RedOn
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 红灯亮.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material TrafficLight/YellowOff
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 黄灯暗.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material TrafficLight/YellowOn
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 黄灯亮.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material TrafficLight/GreenOff
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 绿灯暗.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material TrafficLight/GreenOn
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture 绿灯亮.png
+        filtering trilinear
+      }
+    }
+  }
+}

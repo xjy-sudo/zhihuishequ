@@ -1,0 +1,508 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <world name="competition_world">
+
+    <!-- ==================== -->
+    <!-- 基础环境 -->
+    <!-- ==================== -->
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- 4.2m × 4.2m 地面 -->
+    <model name="competition_ground">
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.2 4.2 0.02</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.2 4.2 0.02</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.12 0.12 0.12 1</ambient>
+            <diffuse>0.12 0.12 0.12 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 外围墙 -->
+    <!-- ==================== -->
+
+    <model name="north_wall">
+      <static>true</static>
+      <pose>0 2.08 0.10 0 0 0</pose>
+
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.15 0.04 0.20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.15 0.04 0.20</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="south_wall">
+      <static>true</static>
+      <pose>0 -2.08 0.10 0 0 0</pose>
+
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.15 0.04 0.20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.15 0.04 0.20</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="west_wall">
+      <static>true</static>
+      <pose>-2.08 0 0.10 0 0 0</pose>
+
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.04 4.15 0.20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.04 4.15 0.20</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="east_wall">
+      <static>true</static>
+      <pose>2.08 0 0.10 0 0 0</pose>
+
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.04 4.15 0.20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.04 4.15 0.20</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 左上 A 区 -->
+    <!-- ==================== -->
+
+    <model name="area_a">
+      <static>true</static>
+      <pose>-0.65 1.15 0.04 0 0 0</pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.15 0.75 0.08</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.15 0.75 0.08</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.55 0.55 0.55 1</ambient>
+            <diffuse>0.55 0.55 0.55 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 左中 B 区 -->
+    <!-- ==================== -->
+
+    <model name="area_b">
+      <static>true</static>
+      <pose>-1.25 -0.25 0.04 0 0 0</pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.05 0.85 0.08</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.05 0.85 0.08</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 左下 楼宇D/站房区域 -->
+    <!-- ==================== -->
+
+    <model name="building_d_station">
+      <static>true</static>
+      <pose>-1.25 -1.25 0.04 0 0 0</pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.05 0.90 0.08</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.05 0.90 0.08</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.45 0.45 0.45 1</ambient>
+            <diffuse>0.45 0.45 0.45 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 中央 楼宇A/B/C + 电动车区域 -->
+    <!-- ==================== -->
+
+    <model name="central_buildings">
+      <static>true</static>
+      <pose>0.55 0 0.04 0 0 0</pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.65 2.65 0.08</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.65 2.65 0.08</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.48 0.48 0.48 1</ambient>
+            <diffuse>0.48 0.48 0.48 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 右侧停车区域 -->
+    <!-- ==================== -->
+
+    <model name="parking_area">
+      <static>true</static>
+      <pose>1.65 -0.15 0.025 0 0 0</pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.65 3.75 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.65 3.75 0.05</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 停车位分隔线 -->
+    <!-- ==================== -->
+
+    <model name="parking_line_1">
+      <static>true</static>
+      <pose>1.65 -0.65 0.055 0 0 0</pose>
+
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.65 0.025 0.01</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="parking_line_2">
+      <static>true</static>
+      <pose>1.65 -1.25 0.055 0 0 0</pose>
+
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.65 0.025 0.01</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="parking_line_3">
+      <static>true</static>
+      <pose>1.65 -1.85 0.055 0 0 0</pose>
+
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.65 0.025 0.01</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 下方斑马线 -->
+    <!-- ==================== -->
+
+    <model name="crosswalk_bottom">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <visual name="stripe1">
+          <pose>-0.18 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe2">
+          <pose>-0.06 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe3">
+          <pose>0.06 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe4">
+          <pose>0.18 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+
+      <pose>0 -1.05 0 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ==================== -->
+    <!-- 上方斑马线 -->
+    <!-- ==================== -->
+
+    <model name="crosswalk_top">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <visual name="stripe1">
+          <pose>-0.18 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe2">
+          <pose>-0.06 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe3">
+          <pose>0.06 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <visual name="stripe4">
+          <pose>0.18 0 0.03 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.07 0.50 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+
+      <pose>0 1.75 0 0 0 0</pose>
+
+    </model>
+
+
+  </world>
+
+</sdf>

@@ -1,0 +1,16 @@
+material TrafficLight/Animated
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+
+            texture_unit
+            {
+                anim_texture ryg.png 6 30.0
+                filtering trilinear
+            }
+        }
+    }
+}

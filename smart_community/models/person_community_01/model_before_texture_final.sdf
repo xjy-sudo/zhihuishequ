@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+
+<model name="person_community_01">
+
+<static>true</static>
+
+<link name="link">
+
+
+<!-- 立牌主体 -->
+
+<visual name="body">
+
+<pose>
+0 0 0.075 0 0 0
+</pose>
+
+<geometry>
+
+<box>
+
+<size>
+0.04 0.005 0.15
+</size>
+
+</box>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+0.5 0.5 0.5 1
+</ambient>
+
+</material>
+
+</visual>
+
+
+
+<!-- 图片贴图层 -->
+
+
+
+
+</link>
+
+</model>
+
+</sdf>

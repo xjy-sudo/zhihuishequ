@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+
+<model name="person_sign">
+
+<static>true</static>
+
+
+<link name="link">
+
+
+<!-- 立牌底板 -->
+
+<visual name="body">
+
+<pose>
+0 0 0.075 0 0 0
+</pose>
+
+
+<geometry>
+
+<box>
+
+<size>
+0.04 0.005 0.15
+</size>
+
+</box>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+0.7 0.7 0.7 1
+</ambient>
+
+<diffuse>
+0.7 0.7 0.7 1
+</diffuse>
+
+</material>  
+
+</visual>
+<!-- 贴图层 -->
+
+<visual name="texture_plane">
+
+<pose>
+0 -0.003 0.075 0 0 0
+</pose>
+
+
+<geometry>
+
+<box>
+
+<size>
+0.04 0.001 0.15
+</size>
+
+</box>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+1 1 1 1
+</ambient>
+
+<diffuse>
+1 1 1 1
+</diffuse>
+
+</material>
+
+
+</visual>
+
+
+
+
+
+<!-- 碰撞 -->
+
+<collision name="collision">
+
+<pose>
+0 0 0.075 0 0 0
+</pose>
+
+
+<geometry>
+
+<box>
+
+<size>
+0.04 0.005 0.15
+</size>
+
+</box>
+
+</geometry>
+
+</collision>
+
+
+
+</link>
+
+
+</model>
+
+
+</sdf>

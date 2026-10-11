@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>smart_community_gazebo</name>
+  <version>0.0.1</version>
+
+  <description>
+    Gazebo plugins for smart community competition.
+  </description>
+
+  <maintainer email="xjy@todo.todo">xjy</maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>gazebo_dev</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

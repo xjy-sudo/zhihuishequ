@@ -1,0 +1,21 @@
+material Community/Person01
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+
+            texture_unit
+            {
+                texture community_rgba_backup.png
+                texture_type 2d
+                filtering trilinear
+                
+            }
+
+            scene_blend alpha_blend
+            depth_write on
+        }
+    }
+}

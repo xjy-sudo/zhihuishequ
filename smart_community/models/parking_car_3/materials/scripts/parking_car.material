@@ -1,0 +1,33 @@
+material ParkingCar/Background3
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture car_background.png
+                texture_type 2d
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material ParkingCar/Plate3
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture plate_03.jpg
+                texture_type 2d
+                filtering trilinear
+            }
+        }
+    }
+}

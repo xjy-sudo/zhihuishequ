@@ -1,0 +1,20 @@
+material Community/Person15
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+
+            texture_unit
+            {
+                texture community_15.png
+                texture_type 2d
+                filtering trilinear
+            }
+
+            scene_blend alpha_blend
+            depth_write on
+        }
+    }
+}

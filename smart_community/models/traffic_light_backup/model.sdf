@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <model name="traffic_light">
+
+    <static>true</static>
+
+    <link name="traffic_light">
+
+      <!-- 灯杆 -->
+      <visual name="pole">
+        <pose>0 0 0.35 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.70</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.08 0.08 0.08 1</ambient>
+          <diffuse>0.08 0.08 0.08 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- 黑色灯箱 -->
+      <visual name="housing">
+        <pose>0 0 0.78 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.18 0.10 0.38</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.02 0.02 0.02 1</ambient>
+          <diffuse>0.02 0.02 0.02 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- 红灯 -->
+      <visual name="red_light">
+        <pose>0 -0.056 0.90 1.5708 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.045</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <emissive>1 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- 黄灯 -->
+      <visual name="yellow_light">
+        <pose>0 -0.056 0.78 1.5708 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.045</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.12 0.12 0 1</ambient>
+          <diffuse>0.12 0.12 0 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- 绿灯 -->
+      <visual name="green_light">
+        <pose>0 -0.056 0.66 1.5708 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.045</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0.12 0 1</ambient>
+          <diffuse>0 0.12 0 1</diffuse>
+        </material>
+      </visual>
+
+    </link>
+
+  
+    <plugin name="traffic_light_plugin"
+            filename="libtraffic_light_plugin.so">
+    </plugin>
+
+  </model>
+
+</sdf>

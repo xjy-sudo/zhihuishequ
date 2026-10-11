@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+
+<model name="parking_car_3">
+
+  
+  <pose>0 0 0 0 0 3.14159</pose>
+<static>true</static>
+
+  <link name="standee">
+
+    <!-- ============================================= -->
+    <!-- 车辆背景碰撞体                                -->
+    <!-- 宽 0.345m，高 0.250m，厚 0.005m              -->
+    <!-- 中心 z=0.125，所以底边正好 z=0               -->
+    <!-- ============================================= -->
+
+    <collision name="background_collision">
+
+      <pose>0 0 0.125 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>0.345 0.005 0.250</size>
+        </box>
+      </geometry>
+
+    </collision>
+
+
+    <!-- ============================================= -->
+    <!-- 车辆背景正面贴图                              -->
+    <!-- ============================================= -->
+
+    <visual name="background_visual">
+
+      <pose>0 0 0.125 0 0 0</pose>
+
+      <geometry>
+        <box>
+          <size>0.345 0.005 0.250</size>
+        </box>
+      </geometry>
+
+      <material>
+
+        <script>
+          <uri>model://parking_car_3/materials/scripts</uri>
+          <uri>model://parking_car_3/materials/textures</uri>
+
+          <name>ParkingCar/Background3</name>
+        </script>
+
+      </material>
+
+    </visual>
+
+
+    <!-- ============================================= -->
+    <!-- 独立车牌                                     -->
+    <!-- 实际显示尺寸：9.5cm × 3cm                    -->
+    <!-- 与背景正面间隔：0.1mm                        -->
+    <!-- ============================================= -->
+
+    <visual name="license_plate">
+
+      <!--
+        背景正面 y = -0.0025
+        再向外 0.0001m
+        所以 y = -0.0026
+
+        z=0.070 先放在车辆尾部下方中央
+      -->
+
+      <pose>0 -0.0026 0.070 1.5708 0 0</pose>
+
+      <geometry>
+
+        <plane>
+          <normal>0 0 1</normal>
+          <size>0.095 0.030</size>
+        </plane>
+
+      </geometry>
+
+      <material>
+
+        <script>
+          <uri>model://parking_car_3/materials/scripts</uri>
+          <uri>model://parking_car_3/materials/textures</uri>
+
+          <name>ParkingCar/Plate3</name>
+        </script>
+
+      </material>
+
+    </visual>
+
+  </link>
+
+</model>
+
+</sdf>

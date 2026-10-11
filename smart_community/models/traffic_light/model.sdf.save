@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+
+<model name="traffic_light">
+
+<static>true</static>
+
+
+<link name="link">
+
+
+<!-- 灯杆 -->
+
+<visual name="pole">
+
+<pose>
+0 0 0.17 0 0 0
+</pose>
+
+<geometry>
+
+<cylinder>
+
+<radius>
+0.0125
+</radius>
+
+<length>
+0.34
+</length>
+
+</cylinder>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+0.02 0.02 0.02 1
+</ambient>
+
+</material>
+
+</visual>
+
+
+
+<!-- 黑色灯箱 -->
+
+<visual name="box">
+
+<pose>
+0 0 0.38 0 0 0
+</pose>
+
+
+<geometry>
+
+<box>
+
+<size>
+0.64 0.08 0.14
+</size>
+
+</box>
+
+</geometry>
+
+
+<material>
+
+<ambient>
+0.01 0.01 0.01 1
+</ambient>
+
+</material>
+
+</visual>
+
+
+
+
+<!-- 红灯 -->
+
+<visual name="red_light">
+
+<pose>
+-0.20 -0.045 0.38 1.5708 0 0
+</pose>
+
+
+<geometry>
+
+<cylinder>
+
+<radius>
+0.07
+</radius>
+
+<length>
+0.005
+</length>
+
+</cylinder>
+
+</geometry>
+
+
+<material>
+
+<script>
+
+<uri>
+model://traffic_light/materials/scripts
+</uri
+<name>
+SmartCommunity/RedLight
+</name>
+
+</script>
+
+</material>
+
+
+</visual>
+
+
+
+
+<!-- 黄灯 -->
+
+<visual name="yellow_light">
+
+<pose>
+0 -0.045 0.38 1.5708 0 0
+</pose>
+
+
+<geometry>
+
+<cylinder>
+
+<radius>
+0.07
+</radius>
+
+<length>
+0.005
+</length>
+
+</cylinder>
+
+</geometry>
+
+
+<material>
+
+<script>
+
+<uri>
+model://traffic_light/materials/scripts
+</uri>
+
+<name>
+SmartCommunity/YellowLight
+</name>
+
+</script>
+
+</material>
+
+
+</visual>
+
+
+
+
+<!-- 绿灯 -->
+
+<visual name="green_light">
+
+<pose>
+0.20 -0.045 0.38 1.5708 0 0
+</pose>
+
+
+<geometry>
+
+<cylinder>
+
+<radius>
+0.07
+</radius>
+
+<length>
+0.005
+</length>
+
+</cylinder>
+
+</geometry>
+
+
+<material>
+
+<script>
+
+<uri>
+model://traffic_light/materials/scripts
+</uri>
+
+<name>
+SmartCommunity/GreenLight
+</name>
+
+</script>
+
+</material>
+
+
+</visual>
+
+
+
+<!-- 保留插件 -->
+
+<plugin name="traffic_light_plugin"
+filename="libtraffic_light_plugin.so">
+
+</plugin>
+
+
+</link>
+
+</model>
+
+</sdf>

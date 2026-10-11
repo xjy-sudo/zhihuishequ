@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="sign">
+    <static>true</static>
+
+    <link name="sign_body">
+
+      <visual name="pole">
+        <pose>0 0 0.25 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.018</radius>
+            <length>0.50</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.15 0.15 0.15 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="board">
+        <pose>0 0 0.55 0 0 0</pose>
+        <geometry>
+          <box><size>0.30 0.025 0.22</size></box>
+        </geometry>
+        <material>
+          <ambient>0.90 0.12 0.08 1</ambient>
+          <diffuse>0.90 0.12 0.08 1</diffuse>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

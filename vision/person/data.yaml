@@ -1,0 +1,23 @@
+path: ./person_dataset
+train: images/train
+val: images/val
+nc: 18
+names:
+- community_01
+- community_02
+- community_03
+- community_04
+- community_05
+- community_06
+- community_07
+- community_08
+- community_09
+- community_10
+- community_11
+- community_12
+- community_13
+- community_14
+- community_15
+- community_16
+- noncommunity_01
+- noncommunity_02

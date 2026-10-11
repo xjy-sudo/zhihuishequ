@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <model name="station">
+
+    <static>true</static>
+
+    <link name="station_body">
+
+      <pose>0 0 0.25 0 0 0</pose>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.60 0.50 0.50</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="body">
+
+        <geometry>
+          <box>
+            <size>0.60 0.50 0.50</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.65 0.65 0.60 1</ambient>
+          <diffuse>0.65 0.65 0.60 1</diffuse>
+        </material>
+
+      </visual>
+
+      <!-- 仪表安装面板 -->
+      <visual name="instrument_panel">
+
+        <pose>0 -0.256 0.03 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.30 0.015 0.20</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.15 0.15 0.15 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+        </material>
+
+      </visual>
+
+    </link>
+
+  </model>
+
+</sdf>

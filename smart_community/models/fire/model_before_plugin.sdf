@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <model name="fire">
+
+    <static>true</static>
+
+    <link name="fire_link">
+
+      <!-- 外层红色火焰 -->
+      <visual name="fire_red">
+        <pose>0 0 0.10 0 0 0</pose>
+
+        <geometry>
+          <sphere>
+            <radius>0.11</radius>
+          </sphere>
+        </geometry>
+
+        <material>
+          <ambient>1 0.05 0 1</ambient>
+          <diffuse>1 0.05 0 1</diffuse>
+          <emissive>1 0.02 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- 中层橙色火焰 -->
+      <visual name="fire_orange">
+        <pose>0 0 0.19 0 0 0</pose>
+
+        <geometry>
+          <sphere>
+            <radius>0.075</radius>
+          </sphere>
+        </geometry>
+
+        <material>
+          <ambient>1 0.35 0 1</ambient>
+          <diffuse>1 0.35 0 1</diffuse>
+          <emissive>1 0.20 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- 内层黄色火焰 -->
+      <visual name="fire_yellow">
+        <pose>0 0 0.27 0 0 0</pose>
+
+        <geometry>
+          <sphere>
+            <radius>0.045</radius>
+          </sphere>
+        </geometry>
+
+        <material>
+          <ambient>1 1 0 1</ambient>
+          <diffuse>1 1 0 1</diffuse>
+          <emissive>1 0.8 0 1</emissive>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+</sdf>

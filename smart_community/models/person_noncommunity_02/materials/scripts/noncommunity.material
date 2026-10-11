@@ -1,0 +1,20 @@
+material NonCommunity/Person02
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+
+            texture_unit
+            {
+                texture noncommunity_02.png
+                texture_type 2d
+                filtering trilinear
+            }
+
+            scene_blend alpha_blend
+            depth_write on
+        }
+    }
+}

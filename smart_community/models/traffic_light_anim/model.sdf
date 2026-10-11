@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+
+  <model name="traffic_light_anim">
+
+    <static>true</static>
+
+    <link name="body">
+
+      <!-- 灰黑色灯箱 -->
+      <visual name="traffic_box">
+        <pose>0 0 0.41 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.59 0.05 0.14</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.12 0.12 0.12 1</ambient>
+          <diffuse>0.12 0.12 0.12 1</diffuse>
+          <specular>0.03 0.03 0.03 1</specular>
+        </material>
+      </visual>
+
+      <!-- 左支架 -->
+      <visual name="left_leg">
+        <pose>-0.3075 0 0.24 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.48</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.12 0.12 0.12 1</ambient>
+          <diffuse>0.12 0.12 0.12 1</diffuse>
+          <specular>0.03 0.03 0.03 1</specular>
+        </material>
+      </visual>
+
+      <!-- 右支架 -->
+      <visual name="right_leg">
+        <pose>0.3075 0 0.24 0 0 0</pose>
+
+        <geometry>
+          <box>
+            <size>0.025 0.025 0.48</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.12 0.12 0.12 1</ambient>
+          <diffuse>0.12 0.12 0.12 1</diffuse>
+          <specular>0.03 0.03 0.03 1</specular>
+        </material>
+      </visual>
+
+      <!-- 动画贴图面 -->
+      <visual name="traffic_light_texture">
+        <pose>0 -0.026 0.41 1.5708 0 0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.59 0.14</size>
+          </plane>
+        </geometry>
+
+        <material>
+          <script>
+            <uri>model://traffic_light_anim/materials/scripts</uri>
+            <uri>model://traffic_light_anim/materials/textures</uri>
+            <name>TrafficLight/Red</name>
+          </script>
+        </material>
+
+        <plugin name="traffic_light_sync_plugin"
+                filename="libtraffic_light_sync_plugin.so">
+        </plugin>
+
+      </visual>
+
+    </link>
+
+  </model>
+
+</sdf>

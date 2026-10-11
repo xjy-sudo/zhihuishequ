@@ -1,0 +1,31 @@
+material CarPlate/Background01
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture car_background.png
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material CarPlate/Plate01
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            texture_unit
+            {
+                texture plate_01.png
+                filtering trilinear
+            }
+        }
+    }
+}
